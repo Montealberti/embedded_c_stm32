@@ -20,9 +20,9 @@ struct Packet
 	uint8_t		longAddr;
 	uint8_t		shortAddr;
 	uint8_t		addrMode;
-};
+};*/
 
-int sizes(void);  */
+int sizes(void);
 
 /*int led(void);
 
@@ -265,11 +265,7 @@ int led(void)
 
 int sizes(void)
 {
-	uint16_t a = 5;
 
-	a = 0 ? (a < 9) : a++;
-
-	printf("El valor de 'a' es: %u\n\n", a);
 
 	printf("Size of CHAR \t\t= %u byte(s)\n",  	 sizeof(char) );
 	printf("Size of SHORT \t\t= %u byte(s)\n", 	 sizeof(short) );
@@ -278,7 +274,6 @@ int sizes(void)
 	printf("Size of LONG LONG \t= %u byte(s)\n", sizeof(long long) );
 	printf("Size of DOUBLE \t\t= %u byte(s)\n", sizeof(double) );
 
-	printf("El valor de 'a' es: %u\n\n", a);
 
 	return 0;
 }
