@@ -39,7 +39,7 @@ void strings(void);
 int main(void)
 {
 
-	strings();
+	sizes();
 
 	return 0;
 
@@ -76,7 +76,7 @@ void keyPad(void)
 	uint32_t volatile * const		GPIOC_PUPDR	= (uint32_t*)0x4002080C;	// Address of the GPIOC mode register + 0x0C
 	uint32_t volatile * const		GPIOC_IDR	= (uint32_t*)0x40020810;	// Address of the GPIOC mode register + 0x10
 	uint32_t volatile * const		GPIOC_ODR	= (uint32_t*)0x40020814;	// Address of the GPIOC mode register + 0x14
-	
+
 	/* Enables the GPIOC peripheral clock by setting bit 2 of RCC_AHB1ENR */
 	*RCC_AHB1ENR |= (1 << 2);
 
@@ -84,7 +84,7 @@ void keyPad(void)
 	*GPIOC_MODER |= (0x55);
 
 	/* Configures the GPIOC pins 10-12 as General Purpose inputs */
-	*GPIOC_MODER &= ~(0x3F << 20);    
+	*GPIOC_MODER &= ~(0x3F << 20);
 
 	/* Enable internal pull up resistors for 10-12 */
 	*GPIOC_PUPDR |= (0x15 << 20);
@@ -261,7 +261,7 @@ int led(void)
 
 	return 0;
 }*/
-/*
+
 
 int sizes(void)
 {
@@ -282,4 +282,3 @@ int sizes(void)
 
 	return 0;
 }
-*/
