@@ -1,7 +1,7 @@
 # Folders & Settings
 .settings/
 .cproject
-embedded_c_stm32-elf-launch
+embedded_c_stm32.elf.launch
 
 # Prerequisites
 *.d
